@@ -1,0 +1,82 @@
+package servlet;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import componenti.Ambiente;
+import exceptions.NullException;
+import exceptions.ZeroException;
+import utils.DBUtils;
+import utils.MyUtils;
+
+/**
+ * Servlet implementation class createAmbientServlet
+ */
+@WebServlet("/createAmbientServlet")
+public class createAmbientServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public createAmbientServlet() {
+        super();
+    }
+
+	/**
+	 * Show ambient create page
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/WEB-INF/views/createAmbient.jsp");
+				dispatcher.forward(request, response);
+	}
+
+	/**
+	 * When the user enters the ambient information, and click Submit.
+	 * This method will be called.
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		Connection conn = MyUtils.getStoredConnection(request);
+		
+		Ambiente ambient = null;
+		
+		String name = request.getParameter("nome");
+		String ubicazione = request.getParameter("ubicazione");
+		String tipo = request.getParameter("tipo");
+		String numSensStr = request.getParameter("numSens");
+		
+		int numSens = Integer.parseInt(numSensStr);
+
+		try {
+			ambient = new Ambiente(name, tipo, ubicazione, numSens);
+		} catch (ZeroException | NullException e) {
+
+			e.printStackTrace();
+		}
+		
+		String errorString = null;
+		
+		if (errorString == null) {
+			try {
+				DBUtils.insertProduct(conn, ambient);
+				} catch (SQLException e) {
+				e.printStackTrace();
+				errorString = e.getMessage();
+			}
+		}
+		
+		
+		
+		
+		
+	}
+
+}

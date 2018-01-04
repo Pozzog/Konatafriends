@@ -1,0 +1,59 @@
+charset = "UTF-8";
+
+body {
+	background-color: #ebfaeb;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	}
+			
+h3 {
+	text-align: center;
+	color: black;
+	padding: 10px;
+	}
+			
+input[type = text] {
+	display: block;
+	padding: 4px 20px;
+	margin: 8px 0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+			
+input[type = password] {
+	display: block;
+	padding: 4px 20px;
+	margin: 8px 0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+			
+input[type = submit] {
+	background-color: #4caf50;
+	color: black;
+	padding: 4px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+			
+input[type = submit]:hover {
+	background-color: #45a049;
+}
+			
+input[type = reset] {
+	background-color: #4caf50;
+	color: black;
+	padding: 4px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+			
+input[type = reset]:hover {
+	background-color: #45a049;
+}
+

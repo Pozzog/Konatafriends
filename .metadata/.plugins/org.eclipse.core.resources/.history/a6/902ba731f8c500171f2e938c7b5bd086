@@ -1,0 +1,96 @@
+package servlet;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import componenti.Ambiente;
+import componenti.Sensore;
+import exceptions.NullException;
+import exceptions.ZeroException;
+import utils.DBUtils;
+import utils.MyUtils;
+
+/**
+ * Servlet implementation class CreateSensorServlet
+ */
+@WebServlet("/createSensor")
+public class CreateSensorServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public CreateSensorServlet() {
+        super();
+    }
+
+	/**
+	 * Show sensor create page
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/WEB-INF/views/createSensor.jsp");
+		
+		dispatcher.forward(request, response);
+	}
+
+
+	/**
+	 * When the user enters the sensor information, and click Submit.
+	 * This method will be called.
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		Connection conn = MyUtils.getStoredConnection(request);
+		
+		Sensore sensor = null;
+		
+		String name = request.getParameter("marca");
+		String ubicazione = request.getParameter("modello");
+		String tipo = request.getParameter("tipologia");
+		String numSensStr = request.getParameter("anno");
+
+		try {
+			sensor = new Sensor(marca, modello, tipo, anno);
+		} catch (ZeroException | NullException e) {
+
+			e.printStackTrace();
+		}
+		
+		String errorString = null;
+		
+		if (errorString == null) {
+			try {
+				DBUtils.insertAmbient(conn, ambient);
+				} catch (SQLException e) {
+				e.printStackTrace();
+				errorString = e.getMessage();
+			}
+		}
+		
+		// Store infomation to request attribute, before forward to views.
+		request.setAttribute("errorString", errorString);
+		request.setAttribute("product", ambient);
+		
+		// If error, forward to Edit page.
+		if (errorString != null) {
+		RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/WEB-INF/views/createAmbient.jsp");
+		dispatcher.forward(request, response);
+		}
+		
+		// If everything nice.
+		// Redirect to the ambient listing page.
+		else {
+		response.sendRedirect(request.getContextPath() + "/ambientList");
+		}	
+	}
+
+}

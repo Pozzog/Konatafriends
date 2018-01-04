@@ -1,0 +1,11 @@
+1512228392745	Rename resource 'footer.jsp'
+1512237421034	Delete element
+1512314510774	Move 'style_form.css' to 'views'
+1512315345461	Move 'style_form.css' to 'WEB-INF'
+1512315595381	Move 'style_form.css' to 'CSS'
+1512315605525	Rename resource 'CSS'
+1512317006018	Rename resource 'style_form.css'
+1512319680945	Move 'style.css' to 'views'
+1512319739602	Move 'style.css' to 'css'
+1512319743901	Move 'css' to 'WebContent'
+1512319992419	Rename resource 'style.css'

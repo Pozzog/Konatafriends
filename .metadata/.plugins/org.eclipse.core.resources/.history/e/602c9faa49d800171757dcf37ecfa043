@@ -1,0 +1,105 @@
+<%@ page language="java" 
+contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
+<!DOCTYPE html>  
+  
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<title>Login</title>
+
+		<link href="../../css/style.css" rel="stylesheet" type="text/css"/>
+		
+		<style>
+			/*body {
+				background-color: #ebfaeb;
+				font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			}
+			
+			h3 {
+				text-align: center;
+				color: black;
+				padding: 10px;
+			}
+			
+			input[type = text] {
+				display: block;
+				padding: 4px 20px;
+				margin: 8px 0;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+				box-sizing: border-box;
+			}
+			
+			input[type = password] {
+				display: block;
+				padding: 4px 20px;
+				margin: 8px 0;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+				box-sizing: border-box;
+			}
+			
+			input[type = submit] {
+				background-color: #4caf50;
+				color: black;
+				padding: 4px 20px;
+				margin: 8px 0;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+			}
+			
+			input[type = submit]:hover {
+				background-color: #45a049;
+			}
+			
+			input[type = reset] {
+				background-color: #4caf50;
+				color: black;
+				padding: 4px 20px;
+				margin: 8px 0;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+			}
+			
+			input[type = reset]:hover {
+				background-color: #45a049;
+			}
+
+			#rm {
+				display: block;
+			}*/
+		</style>
+	</head>
+
+	<body>
+	
+		<jsp:include page = "_header.jsp"></jsp:include>
+		
+
+		<h3>Login</h3>
+		
+		<p style = "color: red;">${errorString}</p>
+
+		<form method = "POST" action = "${pageContext.request.contextPath}/login">
+		
+			<label for = "user">Username</label>
+			<input type = "text" id = "user" name = "userName" value = "${user.userName}" />
+							
+			<label for = "pwd">Password</label>
+			<input type = "password" id = "pwd" name = "password" value = "${user.password}" />
+				
+			<label for = "rm">Remember Me</label>
+			<input type = "checkbox" id = "rm" name = "rememberMe" value = "Y" />
+
+			<input type = "submit" value = "Submit" />
+			<input type = "reset" value="Cancel">
+		</form>
+		
+		<jsp:include page = "_footer.jsp"></jsp:include>
+
+	</body>
+</html>	
+

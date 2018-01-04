@@ -1,0 +1,11 @@
+127.0.0.1 - - [01/Dec/2017:16:44:20 +0100] "GET / HTTP/1.1" 404 1069
+0:0:0:0:0:0:0:1 - - [01/Dec/2017:16:44:34 +0100] "GET /KonataFriends/ HTTP/1.1" 200 632
+0:0:0:0:0:0:0:1 - - [01/Dec/2017:16:44:35 +0100] "GET /KonataFriends/login HTTP/1.1" 200 1314
+0:0:0:0:0:0:0:1 - - [01/Dec/2017:16:44:41 +0100] "POST /KonataFriends/login HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [01/Dec/2017:16:44:41 +0100] "GET /KonataFriends/ambientList HTTP/1.1" 200 3521
+0:0:0:0:0:0:0:1 - - [01/Dec/2017:16:46:13 +0100] "GET /KonataFriends/logout HTTP/1.1" 200 1314
+0:0:0:0:0:0:0:1 - - [01/Dec/2017:16:46:25 +0100] "POST /KonataFriends/login HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [01/Dec/2017:16:46:26 +0100] "GET /KonataFriends/ambientList HTTP/1.1" 200 2871
+0:0:0:0:0:0:0:1 - - [01/Dec/2017:16:47:05 +0100] "POST /KonataFriends/ambientList HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [01/Dec/2017:16:47:05 +0100] "GET /KonataFriends/sensorList HTTP/1.1" 200 2212
+0:0:0:0:0:0:0:1 - - [01/Dec/2017:16:47:10 +0100] "GET /KonataFriends/ambientList HTTP/1.1" 200 2871

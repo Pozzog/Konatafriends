@@ -1,0 +1,56 @@
+body{
+	background-color: #ebfaeb;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif
+}
+			
+h3 {
+	text-align: center;
+	color: black;
+	padding: 10px;
+}
+			
+#table{
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%
+}
+			
+#table td, #table th {				
+	padding: 5px;
+}
+			
+#table th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #4caf50;
+	color: black;
+}
+			
+input[type = submit] {
+	background-color: #4caf50;
+	color: black;
+	padding: 4px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[type = submit]:hover {
+	background-color: #45a049;
+}
+
+input[type = button] {
+		background-color: #4caf50;
+	color: black;
+	padding: 4px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[type = bottun]:hover {
+	background-color: #45a049;
+}		

@@ -1,0 +1,99 @@
+2017-10-16 12:40:39,764 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-10-16 12:42:02,709 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-10-16 13:18:44,587 [Worker-6] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-10-16 20:55:54,064 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-10-16 20:59:58,147 [Worker-6] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-10-19 10:30:27,904 [Worker-9] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-10-20 11:36:54,653 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-10-20 15:25:20,436 [Worker-7] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-10-23 11:45:09,729 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-10-23 11:47:23,000 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-10-23 15:39:42,506 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-10-23 15:46:09,081 [Worker-4] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-10-24 09:55:00,957 [Worker-5] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-10-24 15:57:30,018 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-10-24 18:40:35,156 [Worker-4] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-10-25 15:09:48,040 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-10-25 20:35:46,272 [Worker-4] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-10-26 09:32:24,014 [Worker-8] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-10-26 09:32:27,868 [Worker-8] WARN  c.g.t.t.d.PublishedGradleVersions - Can't close stream after downloading published Gradle versions
+javax.net.ssl.SSLException: Connection has been shutdown: javax.net.ssl.SSLException: java.net.SocketException: Connection reset
+	at sun.security.ssl.SSLSocketImpl.checkEOF(Unknown Source) ~[na:1.8.0_131]
+	at sun.security.ssl.AppInputStream.available(Unknown Source) ~[na:1.8.0_131]
+	at java.io.BufferedInputStream.available(Unknown Source) ~[na:1.8.0_131]
+	at sun.net.www.MeteredStream.available(Unknown Source) ~[na:1.8.0_131]
+	at sun.net.www.http.KeepAliveStream.close(Unknown Source) ~[na:1.8.0_131]
+	at java.io.FilterInputStream.close(Unknown Source) ~[na:1.8.0_131]
+	at sun.net.www.protocol.http.HttpURLConnection$HttpInputStream.close(Unknown Source) ~[na:1.8.0_131]
+	at sun.nio.cs.StreamDecoder.implClose(Unknown Source) ~[na:1.8.0_131]
+	at sun.nio.cs.StreamDecoder.close(Unknown Source) ~[na:1.8.0_131]
+	at java.io.InputStreamReader.close(Unknown Source) ~[na:1.8.0_131]
+	at com.google.common.io.Closeables.close(Closeables.java:77) ~[com.google.guava_15.0.0.v201403281430.jar:na]
+	at com.gradleware.tooling.toolingutils.distribution.PublishedGradleVersions.downloadVersionInformation(PublishedGradleVersions.java:179) [com.gradleware.tooling.utils_0.19.3.v20170801075239.jar:na]
+	at com.gradleware.tooling.toolingutils.distribution.PublishedGradleVersions.tryToDownloadAndCacheVersions(PublishedGradleVersions.java:159) [com.gradleware.tooling.utils_0.19.3.v20170801075239.jar:na]
+	at com.gradleware.tooling.toolingutils.distribution.PublishedGradleVersions.tryToUpdateOutdatedVersionsFile(PublishedGradleVersions.java:143) [com.gradleware.tooling.utils_0.19.3.v20170801075239.jar:na]
+	at com.gradleware.tooling.toolingutils.distribution.PublishedGradleVersions.create(PublishedGradleVersions.java:127) [com.gradleware.tooling.utils_0.19.3.v20170801075239.jar:na]
+	at org.eclipse.buildship.core.util.gradle.PublishedGradleVersionsWrapper$LoadVersionsJob.run(PublishedGradleVersionsWrapper.java:66) [org.eclipse.buildship.core_2.1.2.v20170807-1324.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56) [org.eclipse.core.jobs_3.9.1.v20170714-0547.jar:na]
+Caused by: javax.net.ssl.SSLException: java.net.SocketException: Connection reset
+	at sun.security.ssl.Alerts.getSSLException(Unknown Source) ~[na:1.8.0_131]
+	at sun.security.ssl.SSLSocketImpl.fatal(Unknown Source) ~[na:1.8.0_131]
+	at sun.security.ssl.SSLSocketImpl.fatal(Unknown Source) ~[na:1.8.0_131]
+	at sun.security.ssl.SSLSocketImpl.handleException(Unknown Source) ~[na:1.8.0_131]
+	at sun.security.ssl.SSLSocketImpl.handleException(Unknown Source) ~[na:1.8.0_131]
+	at sun.security.ssl.AppInputStream.read(Unknown Source) ~[na:1.8.0_131]
+	at java.io.BufferedInputStream.read1(Unknown Source) ~[na:1.8.0_131]
+	at java.io.BufferedInputStream.read(Unknown Source) ~[na:1.8.0_131]
+	at sun.net.www.MeteredStream.read(Unknown Source) ~[na:1.8.0_131]
+	at java.io.FilterInputStream.read(Unknown Source) ~[na:1.8.0_131]
+	at sun.net.www.protocol.http.HttpURLConnection$HttpInputStream.read(Unknown Source) ~[na:1.8.0_131]
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source) ~[na:1.8.0_131]
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source) ~[na:1.8.0_131]
+	at sun.nio.cs.StreamDecoder.read(Unknown Source) ~[na:1.8.0_131]
+	at java.io.InputStreamReader.read(Unknown Source) ~[na:1.8.0_131]
+	at java.io.Reader.read(Unknown Source) ~[na:1.8.0_131]
+	at com.google.common.io.CharStreams.copy(CharStreams.java:176) ~[com.google.guava_15.0.0.v201403281430.jar:na]
+	at com.google.common.io.CharStreams.toStringBuilder(CharStreams.java:220) ~[com.google.guava_15.0.0.v201403281430.jar:na]
+	at com.google.common.io.CharStreams.toString(CharStreams.java:194) ~[com.google.guava_15.0.0.v201403281430.jar:na]
+	at com.gradleware.tooling.toolingutils.distribution.PublishedGradleVersions.downloadVersionInformation(PublishedGradleVersions.java:173) [com.gradleware.tooling.utils_0.19.3.v20170801075239.jar:na]
+	... 5 common frames omitted
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source) ~[na:1.8.0_131]
+	at java.net.SocketInputStream.read(Unknown Source) ~[na:1.8.0_131]
+	at sun.security.ssl.InputRecord.readFully(Unknown Source) ~[na:1.8.0_131]
+	at sun.security.ssl.InputRecord.readV3Record(Unknown Source) ~[na:1.8.0_131]
+	at sun.security.ssl.InputRecord.read(Unknown Source) ~[na:1.8.0_131]
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source) ~[na:1.8.0_131]
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(Unknown Source) ~[na:1.8.0_131]
+	... 20 common frames omitted
+2017-10-26 09:32:28,089 [Worker-8] INFO  c.g.t.t.d.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2017-10-27 09:21:32,284 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-10-29 12:34:34,051 [Worker-6] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-10-29 14:23:46,784 [Worker-5] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-10-29 14:49:59,531 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-11-07 09:32:55,730 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-11-07 09:49:10,674 [Worker-9] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-11-07 09:53:10,897 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-11-07 12:46:58,060 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-11-07 12:49:34,337 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-11-08 09:24:15,026 [Worker-7] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-11-09 09:31:30,586 [Worker-7] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-11-10 09:55:59,300 [Worker-6] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-11-13 10:08:39,064 [Worker-4] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-11-14 11:39:11,855 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-11-15 10:13:51,726 [Worker-5] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-11-16 09:16:34,934 [Worker-8] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-11-21 11:06:57,498 [Worker-7] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-11-21 11:55:37,803 [Worker-4] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-11-22 09:59:28,900 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-11-23 09:48:29,220 [Worker-10] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-11-24 16:16:50,000 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-11-26 15:14:57,306 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-11-26 17:35:28,067 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-11-27 10:09:07,305 [Worker-4] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-11-28 15:34:15,636 [Worker-8] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-11-29 09:48:14,929 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-12-01 16:30:14,171 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-12-02 15:09:38,407 [Worker-10] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-12-03 16:02:47,258 [Worker-8] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-12-03 17:35:07,598 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

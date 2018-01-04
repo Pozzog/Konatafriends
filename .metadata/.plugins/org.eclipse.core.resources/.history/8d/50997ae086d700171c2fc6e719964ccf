@@ -1,0 +1,8 @@
+    
+<div style = "padding: 5px; font-family: Trebuchet MS, Arial, Helvetica, sans-serif;">
+	
+	<a href = "${pageContext.request.contextPath}/">Home</a>
+	|
+	<a href = "${pageContext.request.contextPath}/login">Login</a>
+
+</div> 

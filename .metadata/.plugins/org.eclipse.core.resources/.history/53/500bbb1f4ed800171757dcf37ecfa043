@@ -1,0 +1,19 @@
+
+<html>
+	<head>
+		<meta charset = "UFT-8">
+		<title>Elimina Sensore</title>
+	</head>
+	
+	<body>
+		
+		<jsp:include page = "_header.jsp"></jsp:include>
+		<jsp:include page = "_menu.jsp"></jsp:include>
+		
+		<h3>Elimina Sensore</h3>
+		
+		<p style = "color: red;">${errorString}</p>
+		<a href = "sensorList">Lista Sensori</a>
+		
+	</body>
+</html>

@@ -1,0 +1,47 @@
+package servlet;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class CreateSensorServlet
+ */
+@WebServlet("/createSensor")
+public class CreateSensorServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public CreateSensorServlet() {
+        super();
+    }
+
+	/**
+	 * Show sensor create page
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/WEB-INF/views/createSensor.jsp");
+		
+		dispatcher.forward(request, response);
+	}
+
+
+	/**
+	 * When the user enters the sensor information, and click Submit.
+	 * This method will be called.
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		
+		
+	}
+
+}
